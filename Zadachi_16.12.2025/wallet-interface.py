@@ -8,9 +8,9 @@ class Wallet:
   @staticmethod
   def convert_currency(amount, from_currency, to_currency):
       EXCHANGE_RATES = {
-        'EUR': 1.0,
-        'USD': 1.17,
-        'BGN': 1.96
+        'EUR': 1.00000,
+        'USD': 1.17000,
+        'BGN': 1.95583
       }
       if from_currency not in EXCHANGE_RATES or to_currency not in EXCHANGE_RATES:
         return None
@@ -56,11 +56,11 @@ class Wallet:
 
 
 def main():
-  Account1 = Wallet("Aleksandar", 500, "USD")
+  Account1 = Wallet("Aleksandar", 100000, "BGN")
   Account2 = Wallet("Ivan", 200, "USD")
 
-  Account1.deposit(100, "USD")
-  Account1.withdraw(600, "USD")
+  Account1.deposit(100, "EUR")
+  Account1.withdraw(195.58, "BGN")
   Account1.show_current_balance()
 
 if __name__ == "__main__":

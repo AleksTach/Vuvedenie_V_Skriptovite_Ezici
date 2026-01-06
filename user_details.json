@@ -1,0 +1,9 @@
+{
+    "username": "test",
+    "balance": 0,
+    "items": {
+        "Item_2": 20,
+        "Item_3": 60,
+        "Test": 20
+    }
+}
