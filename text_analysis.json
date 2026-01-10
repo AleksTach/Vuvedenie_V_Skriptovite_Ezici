@@ -1,0 +1,47 @@
+{
+    "file_path": "C:\\Users\\TheCiRa7\\Desktop\\VSE\\Vuvedenie_V_Skriptovite_Ezici\\Preparation_for_Test\\test.txt",
+    "statistics": {
+        "total words": 42,
+        "total_sentences": 6,
+        "total_paragraphs": 2,
+        "avarage_word_lenght": 5.26
+    },
+    "most_common_word": {
+        "word": "python",
+        "count": 6
+    },
+    "longest_sentence": {
+        "text": "Python се използва в машинно обучение и анализ на данни",
+        "word_count": 10
+    },
+    "word_frequency": {
+        "python": 3,
+        "мощен": 1,
+        "програмен": 1,
+        "език": 1,
+        "той": 1,
+        "лесен": 1,
+        "учене": 1,
+        "използване": 1,
+        "много": 1,
+        "хора": 1,
+        "обичат": 1,
+        "заради": 1,
+        "простотата": 1,
+        "му": 1,
+        "използва": 1,
+        "машинно": 1,
+        "обучение": 1,
+        "анализ": 1,
+        "данни": 1,
+        "програмирането": 1,
+        "интересно": 1,
+        "то": 1,
+        "развива": 1,
+        "логическото": 1,
+        "мислене": 1,
+        "способността": 1,
+        "решаване": 1,
+        "проблеми": 1
+    }
+}
