@@ -143,7 +143,8 @@ class Text_Analyzer:
 
 
 def main():
-    file_path = r"C:\Users\TheCiRa7\Desktop\VSE\Vuvedenie_V_Skriptovite_Ezici\Preparation_for_Test\test.txt"
+    # file_path = r"C:\Users\TheCiRa7\Desktop\VSE\Vuvedenie_V_Skriptovite_Ezici\Preparation_for_Test\test.txt"
+    file_path = r"C:\Users\tisho\Desktop\HW_Python\Domashno_Vuvedenie_Skriptovite_Ezici\Preparation_for_Test\test.txt"
 
     if not os.path.isfile(file_path):
         print(f"Error: '{file_path}' is not a valid file!")
