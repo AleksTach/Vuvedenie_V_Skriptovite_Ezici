@@ -1,7 +1,7 @@
 import socket
 
-HOST = '127.0.0.1'
-PORT = 10501         # The same port as used by the server
+HOST = '10.101.211.49'
+PORT = 50007         # The same port as used by the server
 
 choice = input("Enter time, file, or random to be sent to the server:")
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
