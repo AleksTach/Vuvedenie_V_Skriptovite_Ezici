@@ -1,0 +1,91 @@
+{% extends "travelogue/base.html" %} {% block title %}{{ destination.title }} ·
+Wanderlist{% endblock %} {% block extra_head %}
+<style>
+  .detail-hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .detail-hero img {
+    width: 100%;
+    border-radius: 32px;
+    height: 360px;
+    object-fit: cover;
+  }
+
+  .detail-copy h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-family: "Manrope", sans-serif;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .experiences {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .experience-card {
+    border-radius: 22px;
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    background: rgba(2, 6, 23, 0.55);
+  }
+
+  .experience-card h3 {
+    margin-top: 0;
+    font-size: 1.15rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--peach);
+  }
+</style>
+{% endblock %} {% block content %}
+<a class="back-link" href="{% url 'travelogue:destinations' %}"
+  >← Back to collection</a
+>
+<section class="detail-hero glass-panel">
+  <img src="{{ destination.image_url }}" alt="{{ destination.title }}" />
+  <div class="detail-copy">
+    <p class="hero-badge">{{ destination.vibe }}</p>
+    <h1>{{ destination.title }}</h1>
+    <div class="meta">
+      <span>{{ destination.location }}</span>
+      <span>Added {{ destination.created_at|date:"M j, Y" }}</span>
+    </div>
+    <p>{{ destination.description }}</p>
+    <p class="hero-highlight">Must do: {{ destination.highlight }}</p>
+  </div>
+</section>
+
+<section class="glass-panel">
+  <h2>Field notes</h2>
+  <div class="experiences">
+    {% for experience in destination.experiences.all %}
+    <article class="experience-card">
+      <h3>{{ experience.title }}</h3>
+      <p>{{ experience.detail }}</p>
+      <small>{{ experience.duration }}</small>
+    </article>
+    {% empty %}
+    <p>No experiences yet. Add them via the admin.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
